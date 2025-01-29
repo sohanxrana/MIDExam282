@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Reservation Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#b3b3fc] flex justify-center items-center min-h-screen p-4">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-xl">
+      <h2 class="text-3xl font-bold mb-4 text-left text-[#342f83]">
+        Restaurant Reservation Form
+      </h2>
+
+      <form
+        action="https://formspree.io/f/mqaeqqbp"
+        method="POST"
+        class="space-y-4"
+      >
+        <!-- Name -->
+        <div>
+          <label class="block text-[#6B46C1] font-semibold mb-1">Name</label>
+          <div class="flex gap-4">
+            <input
+              type="text"
+              name="first_name"
+              required
+              class="w-1/2 p-2 border border-[#342f83] rounded focus:ring-2 focus:ring-[#6B46C1]"
+              placeholder="First"
+            />
+            <input
+              type="text"
+              name="last_name"
+              required
+              class="w-1/2 p-2 border border-[#342f83] rounded focus:ring-2 focus:ring-[#6B46C1]"
+              placeholder="Last"
+            />
+          </div>
+        </div>
+
+        <!-- Email & Phone -->
+        <div class="flex gap-4">
+          <div class="w-1/2">
+            <label class="block text-[#6B46C1] font-semibold mb-1">Email</label>
+            <input
+              type="email"
+              name="email"
+              required
+              class="w-full p-2 border border-[#342f83] rounded focus:ring-2 focus:ring-[#6B46C1]"
+            />
+          </div>
+          <div class="w-1/2">
+            <label class="block text-[#6B46C1] font-semibold mb-1">Phone</label>
+            <input
+              type="tel"
+              name="phone"
+              required
+              class="w-full p-2 border border-[#342f83] rounded focus:ring-2 focus:ring-[#6B46C1]"
+              placeholder="### ### ####"
+            />
+          </div>
+        </div>
+
+        <!-- Date & Time -->
+        <div class="flex gap-4">
+          <div class="w-1/2">
+            <label class="block text-[#6B46C1] font-semibold mb-1"
+              >Reservation Date</label
+            >
+            <input
+              type="date"
+              name="reservation_date"
+              required
+              class="w-full p-2 border border-[#342f83] rounded focus:ring-2 focus:ring-[#6B46C1]"
+            />
+          </div>
+          <div class="w-1/2">
+            <label class="block text-[#6B46C1] font-semibold mb-1"
+              >Reservation Time</label
+            >
+            <input
+              type="time"
+              name="reservation_time"
+              placeholder="HH:MM AM/PM"
+              required
+              class="w-full p-2 border border-[#342f83] rounded focus:ring-2 focus:ring-[#6B46C1]"
+            />
+          </div>
+        </div>
+
+        <!-- Guest Count -->
+        <div>
+          <label class="block text-[#6B46C1] font-semibold mb-1"
+            >How many persons will you be with?</label
+          >
+          <input
+            type="number"
+            name="guest_count"
+            required
+            class="w-full p-2 border border-[#342f83] rounded focus:ring-2 focus:ring-[#6B46C1]"
+          />
+        </div>
+
+        <!-- Notes -->
+        <div>
+          <label class="block text-[#6B46C1] font-semibold mb-1">Notes</label>
+          <textarea
+            name="notes"
+            rows="3"
+            class="w-full p-2 border border-[#342f83] rounded focus:ring-2 focus:ring-[#6B46C1]"
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="w-full bg-[#6B46C1] text-white p-2 rounded-lg hover:bg-[#b3b3fc] transition"
+        >
+          SEND
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
